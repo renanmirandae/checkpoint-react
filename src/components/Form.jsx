@@ -1,60 +1,32 @@
 import '../css/form.css';
+import countries from '../listOfCountries'; //list of countries for select
 
-//list of participating countries
-const countries = ["Catar",
-"Equador",
-"Holanda",
-"Senegal",
-"Estados Unidos",
-"Inglaterra",
-"Irã",
-"País de Gales",
-"Argentina",
-"Arábia Saudita",
-"México",
-"Polônia",
-"França",
-"Dinamarca",
-"Tunísia",
-"Austrália",
-"Espanha",
-"Alemanha",
-"Japão",
-"Costa Rica",
-"Bélgica",
-"Canadá",
-"Marrocos",
-"Croácia",
-"Brasil",
-"Sérvia",
-"Suíça",
-"Camarões",
-"Portugal",
-"Gana",
-"Uruguai",
-"Coreia do Sul"];
-
-function Form()
+function Form({formData, setFormData, handlerSubmit})
 {
     return(
-    <form>
+    <form onSubmit={handlerSubmit}>
         <div>
-            <label for="name">Nome</label>
-            <input type="text" id="name"/>
+            <label htmlFor="name">Nome</label>
+            <input type="text" id="name" value={formData.name} placeholder="Digite o nome do jogador" onChange={event => setFormData({...formData, name: event.target.value})}/>
         </div>
         <div>
-            <label for="lastname">Sobrenome</label>
-            <input type="text" id="lastname"/>
+            <label htmlFor="lastname">Sobrenome</label>
+            <input type="text" id="lastname" value={formData.lastname} placeholder="Digite o sobrenome do jogador" onChange={event => setFormData({...formData, lastname:event.target.value})}/>
         </div>
         <div>
-            <label>Países</label>
-            <select id="countries">
-                {countries.map(element => <option>{element}</option>)}
+            <label>Seleção</label>
+            <select defaultValue={'DEFAULT'} id="countries" onChange={event => setFormData({...formData, team: event.target.value})}>
+                <option disabled hidden value={"DEFAULT"}>Selecione uma seleção</option>
+                {countries.map((element, index) => <option key={index} value={element}>{element}</option>)}
             </select>
+        </div>
+        <div>
+            <label htmlFor="image">Link Imagem</label>
+            <input type="text" id="lastname" value={formData.img} placeholder="https://imagens.com/1.jpg" onChange={event => setFormData({...formData, img: event.target.value})}/>
         </div>
         <button type="submit" id='button-submit'>Adicionar</button>
     </form>
     );
-}
+    }
 
 export default Form;

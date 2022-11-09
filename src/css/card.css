@@ -1,0 +1,22 @@
+.card
+{
+    width: 250px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+img
+{
+    width: 200px;
+    height: 200px;
+    border: solid 5px white;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px #6969696e;
+    
+}

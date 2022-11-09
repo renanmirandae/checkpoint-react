@@ -1,0 +1,18 @@
+.card-container
+{
+    width: 820px;
+    height: auto;
+    background-color: #3b3b3b;
+    margin: 15px auto;
+    border-radius: 8px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: white;
+}
+
+.message-not-player
+{
+    font-size: 1.2em;
+}
