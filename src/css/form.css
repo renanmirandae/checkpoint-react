@@ -1,4 +1,4 @@
-form
+.form-add-player
 {
     display: flex;
     flex-wrap: wrap;
@@ -6,13 +6,13 @@ form
     align-items: center;
 }
 
-label
+.lb-form-add-player
 {
     display: block;
     color:#b8b8b8;
 }
 
-input, select
+.form-add-player-input, .form-add-player-select
 {
     width: 300px;
     height: 32px;
@@ -22,18 +22,13 @@ input, select
     margin: 5px 5px 5px 0;
 }
 
-button
+.button-add-player
 {
-    width: 180px;
+    width: 300px;
     height: 32px;
     color: white;
     border-radius: 5px;
     background-color: #25a556;
     border: none;
     cursor: pointer;
-}
-
-.input-error
-{
-    
 }

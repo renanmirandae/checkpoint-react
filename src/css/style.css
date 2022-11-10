@@ -16,21 +16,3 @@ h1
 {
     font-family: 'Roboto', sans-serif;
 }
-
-.container-add-player
-{
-    width: 820px;
-    height: 200px;
-    background-color: #3b3b3b;
-    border-radius: 8px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 15px;
-}
-
-.container-add-player h1
-{
-    color: white;
-}
