@@ -16,9 +16,10 @@ function App()
     {
         event.preventDefault();
         setError(false);
-        
+
         //Validations
-        if(formData.name === "" || formData.name.length < 3 || formData.lastname === "" || formData.lastname.length < 2)
+        if(formData.name === "" || formData.name.length < 3 || formData.lastname === "" || formData.lastname.length < 2 ||
+        formData.team == "" || formData.img == "")
         {
             return setError(true);
         }else
