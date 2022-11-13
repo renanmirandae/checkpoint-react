@@ -15,7 +15,7 @@ function Form({formData, setFormData, handlerSubmit})
         </div>
         <div>
             <label className='lb-form-add-player' htmlFor='team'>Seleção</label>
-            <select className='form-add-player-select' defaultValue={'DEFAULT'} id="team" onChange={event => setFormData({...formData, team: event.target.value})}>
+            <select className='form-add-player-select' defaultValue={"DEFAULT"} id="team" onChange={event => setFormData({...formData, team: event.target.value})}>
                 <option disabled hidden value={"DEFAULT"}>Selecione uma seleção</option>
                 {countries.map((element, index) => <option key={index} value={element}>{element}</option>)}
             </select>
@@ -27,6 +27,6 @@ function Form({formData, setFormData, handlerSubmit})
         <button className='button-add-player' type="submit" id='button-submit'>Adicionar Jogador</button>
     </form>
     );
-    }
+}
 
 export default Form;

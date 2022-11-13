@@ -8,7 +8,7 @@ import AddPlayerContainer from './components/AddPlayerContainer';
 function App()
 {
     //Create Hooks with useState
-    const [formData, setFormData] = useState({name:"", lastname:"", img:"", team:""});
+    const [formData, setFormData] = useState({name:"", lastname:"", img:"", team:"DEFAULT"});
     const [player, setPlayer] = useState([]);
     const [error, setError] = useState(false);
 
@@ -24,8 +24,8 @@ function App()
             return setError(true);
         }else
         {
-            setPlayer([...player, {id:formData.name + formData.lastname,name: formData.name, lastname:formData.lastname, team: formData.team, img: formData.img}]);
-            setFormData({...formData, name:"", lastname:"", img:"", team:""});
+            setPlayer([...player, {id:formData.name.trim() + formData.lastname.trim(),name: formData.name.trim(), lastname:formData.lastname.trim(), team: formData.team, img: formData.img.trim()}]);
+            setFormData({name:"", lastname:"", img:"", team:"DEFAULT"});
         }
 
     }

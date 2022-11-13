@@ -11,7 +11,7 @@
     color: white;
 }
 
-img
+.img-player
 {
     width: 200px;
     height: 200px;
@@ -19,4 +19,9 @@ img
     border-radius: 50%;
     box-shadow: 2px 2px 2px #6969696e;
     
+}
+
+.card-title-name, .card-title-lastname
+{
+    font-size: 1.2em;;
 }

@@ -4,9 +4,9 @@ const Card = (props) =>
 {
     return(
         <div className="card">
-            <img src={props.img} />
-            <h1>{props.name + " " + props.lastname}</h1>
-            <h2>{props.team}</h2>
+            <img className="img-player" src={props.img} />
+            <h1 className="card-title-name">{props.name + " " + props.lastname}</h1>
+            <h2 className="card-title-lastname">{props.team}</h2>
         </div>
     );
 }

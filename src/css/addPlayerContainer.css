@@ -1,10 +1,10 @@
 .container-add-player
 {
-    width: 820px;
+    width: 650px;
     height: 250px;
     background-color: #3b3b3b;
     border-radius: 8px;
-    margin: 0 auto;
+    margin: 10px auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -20,14 +20,16 @@
 {
     font-size: 0.8em;
     color: rgba(255, 0, 0, 0.87);
+    position: absolute;
+    top: 240px;
 }
 
 .container-add-player-error
 {
-    width: 820px;
+    width: 650px;
     height: 250px;
     border-radius: 8px;
-    margin: 0 auto;
+    margin: 10px auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
